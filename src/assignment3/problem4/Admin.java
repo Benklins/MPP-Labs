@@ -17,22 +17,10 @@ public class Admin {
         double totalRent = 0;
 
         for (Property property : properties) {
-
-            if (property instanceof House house) {
-                totalRent += house.getRent();
-
-            } else if (property instanceof Condominium condominium) {
-                totalRent += condominium.getRent();
-
-            } else if (property instanceof Trailer trailer) {
-                totalRent += trailer.getRent();
-
-            }
+            totalRent+=property.getRent();
         }
         return totalRent;
     }
-
-
 
 
 }
