@@ -1,9 +1,11 @@
-package lab4;
+package lab4.prob4;
 
 
-/** This class tests the code package */
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
-    /* Uncomment when you are ready to test your code
+
 	public static void main(String[] args) {
 		Account[] someCheckingAccounts = new CheckingAccount[2];
 		someCheckingAccounts[0] = new CheckingAccount("231-471", 25.00, 100);
@@ -33,5 +35,5 @@ public class Main {
 		
 		
 	}
-     */
+
 }
