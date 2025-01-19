@@ -42,8 +42,8 @@ public class Commissioned extends Employee {
     }
 
 
-    public void addOrder(Order order) {
-        orders.add(order);
+    public void addNewOrder(String orderNum, LocalDate orderDate, double orderAmount) {
+        orders.add(new Order(orderNum, orderDate,  orderAmount));
     }
 
 }

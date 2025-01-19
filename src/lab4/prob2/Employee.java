@@ -11,24 +11,24 @@ public abstract class Employee {
         this.empId = empId;
     }
 
+
     public void print() {
-        System.out.println(this);
+
+
+        calCompensation(Month.JULY, Year.now()).print();
+
     }
 
-    @Override
-    public String toString() {
-        return "Employee Id: " +empId;
-    }
 
     public abstract double calcGrossPay(Month month, Year year);
 
     public Paycheck calCompensation(Month month, Year year) {
         double grossPay = calcGrossPay(month, year);
         return new Paycheck(grossPay,
-                grossPay * 0.23,
-                grossPay * 0.05,
-                grossPay * 0.01,
-                grossPay * 0.03,
-                grossPay * 0.075);
+                Tax.FICA,
+                Tax.State,
+                Tax.Local,
+                Tax.Medicare,
+                Tax.SocialSecurity);
     }
 }

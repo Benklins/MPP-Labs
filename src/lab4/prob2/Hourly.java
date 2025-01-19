@@ -9,6 +9,8 @@ public class Hourly extends Employee {
 
     private final int hoursPerWeek;
 
+    private static final int WEEKS_PER_MONTH = 4;
+
     public Hourly(String empId, double hourlyWage, int hoursPerWeek) {
         super(empId);
         this.hourlyWage = hourlyWage;
@@ -18,6 +20,6 @@ public class Hourly extends Employee {
 
     @Override
     public double calcGrossPay(Month month, Year year) {
-        return hourlyWage * hoursPerWeek * 4;
+        return hourlyWage * hoursPerWeek * WEEKS_PER_MONTH;
     }
 }
