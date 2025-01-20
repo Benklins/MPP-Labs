@@ -17,8 +17,8 @@ public class Order {
     }
 
 
-    public void addItem(String name) {
-        orderItems.add(CustOrderFactory.createItem(name));
+    public void addItem(Item item) {
+        orderItems.add(item);
     }
 
     @Override

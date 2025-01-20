@@ -5,15 +5,17 @@ import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
 
-        Customer cust = CustOrderFactory.createCustomer("Bob");
-        Order order = CustOrderFactory.createOrder(cust, LocalDate.now());
+        CustOrderFactory custOrderFactory = new CustOrderFactory();
 
-        order.addItem("Shirt");
-        order.addItem("Laptop");
+        Customer cust = custOrderFactory.createCustomer("Bob");
+        Order order = custOrderFactory.createOrder(cust, LocalDate.now());
 
-        order = CustOrderFactory.createOrder(cust, LocalDate.now());
-        order.addItem("Pants");
-        order.addItem("Knife set");
+        order.addItem(custOrderFactory.createItem("Shirt"));
+        order.addItem(custOrderFactory.createItem("Laptop"));
+
+        order = custOrderFactory.createOrder(cust, LocalDate.now());
+        order.addItem(custOrderFactory.createItem("Pants"));
+        order.addItem(custOrderFactory.createItem("Knife set"));
 
         System.out.println(cust.getOrders());
     }
