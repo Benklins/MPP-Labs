@@ -7,6 +7,7 @@ public class Main {
 
         Customer cust = CustOrderFactory.createCustomer("Bob");
         Order order = CustOrderFactory.createOrder(cust, LocalDate.now());
+
         order.addItem("Shirt");
         order.addItem("Laptop");
 

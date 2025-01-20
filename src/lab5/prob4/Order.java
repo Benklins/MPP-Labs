@@ -6,9 +6,9 @@ import java.util.List;
 
 
 public class Order {
-    private LocalDate orderDate;
+    private final LocalDate orderDate;
 
-    private List<Item> orderItems;
+    private final List<Item> orderItems;
 
 
     public Order(LocalDate orderDate) {
@@ -18,7 +18,7 @@ public class Order {
 
 
     public void addItem(String name) {
-        orderItems.add(new Item(name));
+        orderItems.add(CustOrderFactory.createItem(name));
     }
 
     @Override
