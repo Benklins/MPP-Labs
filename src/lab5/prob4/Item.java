@@ -3,7 +3,7 @@ package lab5.prob4;
 public class Item {
     private final String name;
 
-    public Item(String name) {
+    protected Item(String name) {
         this.name = name;
     }
 

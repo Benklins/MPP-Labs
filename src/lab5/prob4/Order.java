@@ -11,7 +11,7 @@ public class Order {
     private final List<Item> orderItems;
 
 
-    public Order(LocalDate orderDate) {
+    protected Order(LocalDate orderDate) {
         this.orderDate = orderDate;
         orderItems = new ArrayList<>();
     }
