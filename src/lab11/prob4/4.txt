@@ -1,0 +1,10 @@
+4)
+a. Yes, there is compiler error.
+The line nums.add(3.14) will cause a compiler error because nums is declared as ? extends Number.
+When a list is declared with ? extends Number, you cannot add any elements to it because the exact
+type is unknown. The compiler cannot guarantee that 3.14 (a Double) is compatible with the list
+type (List<Integer> in this case).
+
+b. Compiler Error:
+The error occurs at double dbl = sum(ints); because ints is of type List<? super Integer>, which is
+incompatible with the expected parameter type Collection<? extends Number> for the sum method.

@@ -1,0 +1,10 @@
+1)
+a. Compiler error occurs here: List<Number> nums = ints;
+Even though Integer extends Number, List<Number> is NOT a covariant of List<Integer>. Reason "ints"
+which is a type of List<Integer> cannot be assigned to List<? extends Number>
+
+
+b. Compiler error occurs here: nums.add(3.14);
+List<? extends Number> is a covariant of List<Integer> since Integer extends Number. However, covariants
+are read-only meaning one cannot add elements! An attempt to add 3.14 leads to compiler error!
+
